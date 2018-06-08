@@ -17,30 +17,30 @@ class String
   def count_sentences
     period = self.split(".")
     period.delete("")
-    question = self.split("?")
-    question.delete("")
-    exclaim = self.split("!")
-    exclaim.delete("")
     if sentence?
       dot = period.count
     else
       dot = period.count - 1
     end
+    question = self.split("?")
+    question.delete("")
     if question?
       ques = question.count
     else
       ques = question.count - 1
     end
+    exclaim = self.split("!")
+    exclaim.delete("")
     if exclamation?
       excla = exclaim.count
     else
       excla = exclaim.count - 1
     end
-    sum = dot + ques + excla
-    if sum == -3
+    total = dot + ques + excla
+    if total == -3
       return 0
     else
-      sum
+      total 
     end
   end
 end
