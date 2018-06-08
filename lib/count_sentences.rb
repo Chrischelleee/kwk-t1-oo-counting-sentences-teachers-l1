@@ -22,21 +22,21 @@ class String
     exclaim = self.split("!")
     exclaim.delete("")
     if sentence?
-      per = period.count
+      dot = period.count
     else
-      per = period.count - 1
+      dot = period.count - 1
     end
     if question?
-      que = question.count
+      ques = question.count
     else
-      que = question.count - 1
+      ques = question.count - 1
     end
     if exclamation?
-      exc = exclaim.count
+      excla = exclaim.count
     else
-      exc = exclaim.count - 1
+      excla = exclaim.count - 1
     end
-    sum = per + que + exc
+    sum = dot + ques + excla
     if sum == -3
       return 0
     else
